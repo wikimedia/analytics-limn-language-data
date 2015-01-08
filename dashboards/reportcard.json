@@ -1,0 +1,13 @@
+{
+    "id"       : "reportcard",
+    "headline" : "Language",
+    "subhead"  : "",
+    "tabs": [
+        {
+            "name": "Beta Enables",
+            "graph_ids": [
+                "http://datasets.wikimedia.org/limn-public-data/language/datafiles/content_translation_beta.csv"
+            ]
+        }
+    ]
+}
