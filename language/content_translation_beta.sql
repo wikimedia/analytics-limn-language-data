@@ -11,9 +11,9 @@
             left join
         (select count(*) as mswiki from mswiki.user_properties where up_property = 'cx') ms on 1=1
             left join
-        (select count(*) as nbwiki from nbwiki.user_properties where up_property = 'cx') nb on 1=1
-            left join
         (select count(*) as nnwiki from nnwiki.user_properties where up_property = 'cx') nn on 1=1
+            left join
+        (select count(*) as nowiki from nowiki.user_properties where up_property = 'cx') no on 1=1
             left join
         (select count(*) as ptwiki from ptwiki.user_properties where up_property = 'cx') pt on 1=1
             left join
