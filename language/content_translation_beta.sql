@@ -3,6 +3,8 @@
             left join
         (select count(*) as dawiki from dawiki.user_properties where up_property = 'cx') da on 1=1
             left join
+        (select count(*) as enwiki from enwiki.user_properties where up_property = 'cx') en on 1=1
+            left join
         (select count(*) as eowiki from eowiki.user_properties where up_property = 'cx') eo on 1=1
             left join
         (select count(*) as eswiki from eswiki.user_properties where up_property = 'cx') es on 1=1
