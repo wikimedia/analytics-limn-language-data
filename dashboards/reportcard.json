@@ -1,10 +1,10 @@
 {
     "id"       : "reportcard",
     "headline" : "Language",
-    "subhead"  : "",
+    "subhead"  : "Content Translation",
     "tabs": [
         {
-            "name": "Beta Enables",
+            "name": "Number of CX Beta enables",
             "graph_ids": [
                 "http://datasets.wikimedia.org/limn-public-data/language/datafiles/content_translation_beta.csv"
             ]
