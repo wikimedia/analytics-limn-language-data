@@ -19,3 +19,8 @@ graphs:
         frequency: hourly
         timeboxed: true
         starts: 2015-01-13
+    content_translation_beta_manual:
+        title: 'People manually enabling Content Translation'
+        frequency: hourly
+        timeboxed: true
+        starts: 2015-01-13
