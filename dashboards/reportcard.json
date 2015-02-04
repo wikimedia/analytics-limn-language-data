@@ -4,9 +4,15 @@
     "subhead"  : "Content Translation",
     "tabs": [
         {
-            "name": "Number of CX Beta enables",
+            "name": "CX Beta enablements",
             "graph_ids": [
-                "http://datasets.wikimedia.org/limn-public-data/language/datafiles/content_translation_beta.csv"
+                "http://datasets.wikimedia.org/limn-public-data/language/datafiles/daily_content_translation_beta.tsv"
+            ]
+        }
+        {
+            "name": "CX Beta enablements (manual)",
+            "graph_ids": [
+                "http://datasets.wikimedia.org/limn-public-data/language/datafiles/daily_content_translation_beta_manual.tsv"
             ]
         }
     ]
