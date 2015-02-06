@@ -10,7 +10,7 @@
             ]
         },
         {
-            "name": "CX Beta enablements (manual)",
+            "name": "CX Beta manual enablements",
             "graph_ids": [
                 "http://datasets.wikimedia.org/limn-public-data/language/datafiles/daily_content_translation_beta_manual.tsv"
             ]
