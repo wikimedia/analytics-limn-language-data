@@ -1,15 +1,15 @@
- select current_date() as date,
-        cawiki,
-        dawiki,
-        eowiki,
-        eswiki,
-        idwiki,
-        mswiki,
-        nnwiki,
-        nowiki,
-        ptwiki,
-        svwiki
-   from
+select current_date() as date,
+	cawiki,
+	dawiki,
+	eowiki,
+	eswiki,
+	idwiki,
+	mswiki,
+	nnwiki,
+	nowiki,
+	ptwiki,
+	svwiki
+	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
 left join
 ( select count(*) as dawiki from dawiki.user_properties where up_property = 'cx' and up_value = 1 ) da on 1=1
