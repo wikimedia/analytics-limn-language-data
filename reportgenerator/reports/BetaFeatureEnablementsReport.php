@@ -9,7 +9,7 @@ class BetaFeatureEnablementsReport implements ReportInterface {
 			$wikis[$language] = $language . 'wiki';
 		}
 
-		$sql .= "select current_date() as date,\n\t";
+		$sql = "select current_date() as date,\n\t";
 		$sql .= implode( ",\n\t", $wikis );
 		$sql .= "\n\tfrom\n";
 
