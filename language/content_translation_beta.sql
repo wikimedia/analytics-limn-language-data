@@ -4,9 +4,11 @@ select current_date() as date,
 	eowiki,
 	eswiki,
 	idwiki,
+	kywiki,
 	mswiki,
 	nnwiki,
 	nowiki,
+	pawiki,
 	ptwiki,
 	svwiki,
 	minwiki,
@@ -22,11 +24,15 @@ left join
 left join
 ( select count(*) as idwiki from idwiki.user_properties where up_property = 'cx' and up_value = 1 ) id on 1=1
 left join
+( select count(*) as kywiki from kywiki.user_properties where up_property = 'cx' and up_value = 1 ) ky on 1=1
+left join
 ( select count(*) as mswiki from mswiki.user_properties where up_property = 'cx' and up_value = 1 ) ms on 1=1
 left join
 ( select count(*) as nnwiki from nnwiki.user_properties where up_property = 'cx' and up_value = 1 ) nn on 1=1
 left join
 ( select count(*) as nowiki from nowiki.user_properties where up_property = 'cx' and up_value = 1 ) no on 1=1
+left join
+( select count(*) as pawiki from pawiki.user_properties where up_property = 'cx' and up_value = 1 ) pa on 1=1
 left join
 ( select count(*) as ptwiki from ptwiki.user_properties where up_property = 'cx' and up_value = 1 ) pt on 1=1
 left join
