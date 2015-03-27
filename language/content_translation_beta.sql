@@ -12,7 +12,9 @@ select current_date() as date,
 	minwiki,
 	uzwiki,
 	kywiki,
-	pawiki
+	pawiki,
+	knwiki,
+	ukwiki
 	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
 left join
@@ -41,4 +43,8 @@ left join
 ( select count(*) as kywiki from kywiki.user_properties where up_property = 'cx' and up_value = 1 ) ky on 1=1
 left join
 ( select count(*) as pawiki from pawiki.user_properties where up_property = 'cx' and up_value = 1 ) pa on 1=1
+left join
+( select count(*) as knwiki from knwiki.user_properties where up_property = 'cx' and up_value = 1 ) kn on 1=1
+left join
+( select count(*) as ukwiki from ukwiki.user_properties where up_property = 'cx' and up_value = 1 ) uk on 1=1
 ;
