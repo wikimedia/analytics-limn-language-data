@@ -14,7 +14,12 @@ select current_date() as date,
 	kywiki,
 	pawiki,
 	knwiki,
-	ukwiki
+	ukwiki,
+	bgwiki,
+	frwiki,
+	mkwiki,
+	shwiki,
+	slwiki
 	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from cawiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) ca
 left join
@@ -47,4 +52,14 @@ left join
 ( select count(*) as knwiki from knwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from knwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) kn on 1=1
 left join
 ( select count(*) as ukwiki from ukwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from ukwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) uk on 1=1
+left join
+( select count(*) as bgwiki from bgwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from bgwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) bg on 1=1
+left join
+( select count(*) as frwiki from frwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from frwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) fr on 1=1
+left join
+( select count(*) as mkwiki from mkwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from mkwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) mk on 1=1
+left join
+( select count(*) as shwiki from shwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from shwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) sh on 1=1
+left join
+( select count(*) as slwiki from slwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from slwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) sl on 1=1
 ;
