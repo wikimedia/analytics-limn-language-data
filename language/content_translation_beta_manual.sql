@@ -19,7 +19,9 @@ select current_date() as date,
 	frwiki,
 	mkwiki,
 	shwiki,
-	slwiki
+	slwiki,
+	guwiki,
+	viwiki
 	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from cawiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) ca
 left join
@@ -62,4 +64,8 @@ left join
 ( select count(*) as shwiki from shwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from shwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) sh on 1=1
 left join
 ( select count(*) as slwiki from slwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from slwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) sl on 1=1
+left join
+( select count(*) as guwiki from guwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from guwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) gu on 1=1
+left join
+( select count(*) as viwiki from viwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from viwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) vi on 1=1
 ;
