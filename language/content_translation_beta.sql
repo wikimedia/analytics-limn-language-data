@@ -21,7 +21,24 @@ select current_date() as date,
 	shwiki,
 	slwiki,
 	guwiki,
-	viwiki
+	viwiki,
+	afwiki,
+	anwiki,
+	astwiki,
+	bawiki,
+	cvwiki,
+	euwiki,
+	glwiki,
+	koiwiki,
+	kvwiki,
+	lezwiki,
+	ocwiki,
+	sahwiki,
+	simplewiki,
+	ttwiki,
+	tyvwiki,
+	udmwiki,
+	xhwiki
 	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
 left join
@@ -68,4 +85,38 @@ left join
 ( select count(*) as guwiki from guwiki.user_properties where up_property = 'cx' and up_value = 1 ) gu on 1=1
 left join
 ( select count(*) as viwiki from viwiki.user_properties where up_property = 'cx' and up_value = 1 ) vi on 1=1
+left join
+( select count(*) as afwiki from afwiki.user_properties where up_property = 'cx' and up_value = 1 ) af on 1=1
+left join
+( select count(*) as anwiki from anwiki.user_properties where up_property = 'cx' and up_value = 1 ) an on 1=1
+left join
+( select count(*) as astwiki from astwiki.user_properties where up_property = 'cx' and up_value = 1 ) ast on 1=1
+left join
+( select count(*) as bawiki from bawiki.user_properties where up_property = 'cx' and up_value = 1 ) ba on 1=1
+left join
+( select count(*) as cvwiki from cvwiki.user_properties where up_property = 'cx' and up_value = 1 ) cv on 1=1
+left join
+( select count(*) as euwiki from euwiki.user_properties where up_property = 'cx' and up_value = 1 ) eu on 1=1
+left join
+( select count(*) as glwiki from glwiki.user_properties where up_property = 'cx' and up_value = 1 ) gl on 1=1
+left join
+( select count(*) as koiwiki from koiwiki.user_properties where up_property = 'cx' and up_value = 1 ) koi on 1=1
+left join
+( select count(*) as kvwiki from kvwiki.user_properties where up_property = 'cx' and up_value = 1 ) kv on 1=1
+left join
+( select count(*) as lezwiki from lezwiki.user_properties where up_property = 'cx' and up_value = 1 ) lez on 1=1
+left join
+( select count(*) as ocwiki from ocwiki.user_properties where up_property = 'cx' and up_value = 1 ) oc on 1=1
+left join
+( select count(*) as sahwiki from sahwiki.user_properties where up_property = 'cx' and up_value = 1 ) sah on 1=1
+left join
+( select count(*) as simplewiki from simplewiki.user_properties where up_property = 'cx' and up_value = 1 ) simple on 1=1
+left join
+( select count(*) as ttwiki from ttwiki.user_properties where up_property = 'cx' and up_value = 1 ) tt on 1=1
+left join
+( select count(*) as tyvwiki from tyvwiki.user_properties where up_property = 'cx' and up_value = 1 ) tyv on 1=1
+left join
+( select count(*) as udmwiki from udmwiki.user_properties where up_property = 'cx' and up_value = 1 ) udm on 1=1
+left join
+( select count(*) as xhwiki from xhwiki.user_properties where up_property = 'cx' and up_value = 1 ) xh on 1=1
 ;
