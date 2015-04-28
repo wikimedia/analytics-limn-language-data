@@ -38,7 +38,11 @@ select current_date() as date,
 	ttwiki,
 	tyvwiki,
 	udmwiki,
-	xhwiki
+	xhwiki,
+	cswiki,
+	elwiki,
+	kkwiki,
+	zuwiki
 	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
 left join
@@ -119,4 +123,12 @@ left join
 ( select count(*) as udmwiki from udmwiki.user_properties where up_property = 'cx' and up_value = 1 ) udm on 1=1
 left join
 ( select count(*) as xhwiki from xhwiki.user_properties where up_property = 'cx' and up_value = 1 ) xh on 1=1
+left join
+( select count(*) as cswiki from cswiki.user_properties where up_property = 'cx' and up_value = 1 ) cs on 1=1
+left join
+( select count(*) as elwiki from elwiki.user_properties where up_property = 'cx' and up_value = 1 ) el on 1=1
+left join
+( select count(*) as kkwiki from kkwiki.user_properties where up_property = 'cx' and up_value = 1 ) kk on 1=1
+left join
+( select count(*) as zuwiki from zuwiki.user_properties where up_property = 'cx' and up_value = 1 ) zu on 1=1
 ;
