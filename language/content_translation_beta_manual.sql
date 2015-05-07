@@ -61,7 +61,24 @@ select current_date() as date,
 	tswiki,
 	tumwiki,
 	twwiki,
-	vewiki
+	vewiki,
+	abwiki,
+	avwiki,
+	azwiki,
+	crhwiki,
+	gagwiki,
+	hywiki,
+	kaawiki,
+	kbdwiki,
+	krcwiki,
+	ladwiki,
+	mtwiki,
+	mwlwiki,
+	oswiki,
+	rmywiki,
+	roa-rupwiki,
+	sqwiki,
+	trwiki
 	from
 ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from cawiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) ca
 left join
@@ -188,4 +205,38 @@ left join
 ( select count(*) as twwiki from twwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from twwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) tw on 1=1
 left join
 ( select count(*) as vewiki from vewiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from vewiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) ve on 1=1
+left join
+( select count(*) as abwiki from abwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from abwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) ab on 1=1
+left join
+( select count(*) as avwiki from avwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from avwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) av on 1=1
+left join
+( select count(*) as azwiki from azwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from azwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) az on 1=1
+left join
+( select count(*) as crhwiki from crhwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from crhwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) crh on 1=1
+left join
+( select count(*) as gagwiki from gagwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from gagwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) gag on 1=1
+left join
+( select count(*) as hywiki from hywiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from hywiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) hy on 1=1
+left join
+( select count(*) as kaawiki from kaawiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from kaawiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) kaa on 1=1
+left join
+( select count(*) as kbdwiki from kbdwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from kbdwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) kbd on 1=1
+left join
+( select count(*) as krcwiki from krcwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from krcwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) krc on 1=1
+left join
+( select count(*) as ladwiki from ladwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from ladwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) lad on 1=1
+left join
+( select count(*) as mtwiki from mtwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from mtwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) mt on 1=1
+left join
+( select count(*) as mwlwiki from mwlwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from mwlwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) mwl on 1=1
+left join
+( select count(*) as oswiki from oswiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from oswiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) os on 1=1
+left join
+( select count(*) as rmywiki from rmywiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from rmywiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) rmy on 1=1
+left join
+( select count(*) as roa-rupwiki from roa-rupwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from roa-rupwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) roa-rup on 1=1
+left join
+( select count(*) as sqwiki from sqwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from sqwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) sq on 1=1
+left join
+( select count(*) as trwiki from trwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from trwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) tr on 1=1
 ;
