@@ -29,7 +29,8 @@ select current_date() as date,
 	cvwiki,
 	euwiki,
 	glwiki,
-	koiwiki,
+	koiwiki
+
 	kvwiki,
 	lezwiki,
 	ocwiki,

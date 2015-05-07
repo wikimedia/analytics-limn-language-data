@@ -13,14 +13,15 @@ output:
 defaults:
     db: el
 # the key in the graph section is the name of the sql file and generated file
-graphs:
-    content_translation_beta:
-        title: 'People enabling Content Translation'
-        frequency: hourly
-        timeboxed: true
-        starts: 2015-01-13
-    content_translation_beta_manual:
-        title: 'People manually enabling Content Translation'
-        frequency: hourly
-        timeboxed: true
-        starts: 2015-01-13
+# NOTE: these don't run properly, so they should stay disabled until generate.py is fixed properly:
+#graphs:
+    #content_translation_beta:
+        #title: 'People enabling Content Translation'
+        #frequency: hourly
+        #timeboxed: true
+        #starts: 2015-01-13
+    #content_translation_beta_manual:
+        #title: 'People manually enabling Content Translation'
+        #frequency: hourly
+        #timeboxed: true
+        #starts: 2015-01-13
