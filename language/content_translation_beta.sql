@@ -119,7 +119,23 @@
         gnwiki,
         extwiki,
         papwiki,
-        ltwiki
+        ltwiki,
+        bat-smgwiki,
+        bswiki,
+        etwiki,
+        fiwiki,
+        fiu-vrowiki,
+        fywiki,
+        hrwiki,
+        huwiki,
+        nds-nlwiki,
+        nlwiki,
+        rowiki,
+        sewiki,
+        skwiki,
+        srwiki,
+        szlwiki,
+        vepwiki
 
    from (select *
            from ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
@@ -184,7 +200,9 @@
                 left join
                 ( select count(*) as koiwiki from koiwiki.user_properties where up_property = 'cx' and up_value = 1 ) koi on 1=1
         ) first30
+
             cross join
+
         (select *
            from ( select count(*) as kvwiki from kvwiki.user_properties where up_property = 'cx' and up_value = 1 ) kv
                 left join
@@ -361,6 +379,42 @@
                 ( select count(*) as papwiki from papwiki.user_properties where up_property = 'cx' and up_value = 1 ) pap on 1=1
                 left join
                 ( select count(*) as ltwiki from ltwiki.user_properties where up_property = 'cx' and up_value = 1 ) lt on 1=1
+                left join
+                ( select count(*) as bat-smgwiki from bat-smgwiki.user_properties where up_property = 'cx' and up_value = 1 ) bat-smg on 1=1
+                left join
+                ( select count(*) as bswiki from bswiki.user_properties where up_property = 'cx' and up_value = 1 ) bs on 1=1
+                left join
+                ( select count(*) as etwiki from etwiki.user_properties where up_property = 'cx' and up_value = 1 ) et on 1=1
+                left join
+                ( select count(*) as fiwiki from fiwiki.user_properties where up_property = 'cx' and up_value = 1 ) fi on 1=1
+                left join
+                ( select count(*) as fiu-vrowiki from fiu-vrowiki.user_properties where up_property = 'cx' and up_value = 1 ) fiu-vro on 1=1
+                left join
+                ( select count(*) as fywiki from fywiki.user_properties where up_property = 'cx' and up_value = 1 ) fy on 1=1
+                left join
+                ( select count(*) as hrwiki from hrwiki.user_properties where up_property = 'cx' and up_value = 1 ) hr on 1=1
+                left join
+                ( select count(*) as huwiki from huwiki.user_properties where up_property = 'cx' and up_value = 1 ) hu on 1=1
         ) forth30
+
+            cross join
+
+        (select *
+           from ( select count(*) as nds-nlwiki from nds-nlwiki.user_properties where up_property = 'cx' and up_value = 1 ) nds-nl
+                left join
+                ( select count(*) as nlwiki from nlwiki.user_properties where up_property = 'cx' and up_value = 1 ) nl on 1=1
+                left join
+                ( select count(*) as rowiki from rowiki.user_properties where up_property = 'cx' and up_value = 1 ) ro on 1=1
+                left join
+                ( select count(*) as sewiki from sewiki.user_properties where up_property = 'cx' and up_value = 1 ) se on 1=1
+                left join
+                ( select count(*) as skwiki from skwiki.user_properties where up_property = 'cx' and up_value = 1 ) sk on 1=1
+                left join
+                ( select count(*) as srwiki from srwiki.user_properties where up_property = 'cx' and up_value = 1 ) sr on 1=1
+                left join
+                ( select count(*) as szlwiki from szlwiki.user_properties where up_property = 'cx' and up_value = 1 ) szl on 1=1
+                left join
+                ( select count(*) as vepwiki from vepwiki.user_properties where up_property = 'cx' and up_value = 1 ) vep on 1=1
+        ) fifth30
 
 ;
