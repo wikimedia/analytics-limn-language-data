@@ -167,7 +167,22 @@
         cywiki,
         vlswiki,
         yiwiki,
-        zeawiki
+        zeawiki,
+        biwiki,
+        brwiki,
+        chrwiki,
+        chywiki,
+        frpwiki,
+        htwiki,
+        lnwiki,
+        maiwiki,
+        nrmwiki,
+        pcdwiki,
+        pihwiki,
+        pmswiki,
+        smwiki,
+        tawiki,
+        wawiki
 
    from (select *
            from ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
@@ -515,6 +530,36 @@
                 ( select count(*) as yiwiki from yiwiki.user_properties where up_property = 'cx' and up_value = 1 ) yi on 1=1
                 left join
                 ( select count(*) as zeawiki from zeawiki.user_properties where up_property = 'cx' and up_value = 1 ) zea on 1=1
+                left join
+                ( select count(*) as biwiki from biwiki.user_properties where up_property = 'cx' and up_value = 1 ) bi on 1=1
+                left join
+                ( select count(*) as brwiki from brwiki.user_properties where up_property = 'cx' and up_value = 1 ) br on 1=1
+                left join
+                ( select count(*) as chrwiki from chrwiki.user_properties where up_property = 'cx' and up_value = 1 ) chr on 1=1
+                left join
+                ( select count(*) as chywiki from chywiki.user_properties where up_property = 'cx' and up_value = 1 ) chy on 1=1
+                left join
+                ( select count(*) as frpwiki from frpwiki.user_properties where up_property = 'cx' and up_value = 1 ) frp on 1=1
+                left join
+                ( select count(*) as htwiki from htwiki.user_properties where up_property = 'cx' and up_value = 1 ) ht on 1=1
+                left join
+                ( select count(*) as lnwiki from lnwiki.user_properties where up_property = 'cx' and up_value = 1 ) ln on 1=1
+                left join
+                ( select count(*) as maiwiki from maiwiki.user_properties where up_property = 'cx' and up_value = 1 ) mai on 1=1
+                left join
+                ( select count(*) as nrmwiki from nrmwiki.user_properties where up_property = 'cx' and up_value = 1 ) nrm on 1=1
+                left join
+                ( select count(*) as pcdwiki from pcdwiki.user_properties where up_property = 'cx' and up_value = 1 ) pcd on 1=1
+                left join
+                ( select count(*) as pihwiki from pihwiki.user_properties where up_property = 'cx' and up_value = 1 ) pih on 1=1
+                left join
+                ( select count(*) as pmswiki from pmswiki.user_properties where up_property = 'cx' and up_value = 1 ) pms on 1=1
+                left join
+                ( select count(*) as smwiki from smwiki.user_properties where up_property = 'cx' and up_value = 1 ) sm on 1=1
+                left join
+                ( select count(*) as tawiki from tawiki.user_properties where up_property = 'cx' and up_value = 1 ) ta on 1=1
+                left join
+                ( select count(*) as wawiki from wawiki.user_properties where up_property = 'cx' and up_value = 1 ) wa on 1=1
         ) sixth30
 
 ;
