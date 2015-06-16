@@ -182,7 +182,30 @@
         pmswiki,
         smwiki,
         tawiki,
-        wawiki
+        wawiki,
+        acewiki,
+        bjnwiki,
+        bugwiki,
+        bxrwiki,
+        chwiki,
+        fjwiki,
+        hawwiki,
+        hifwiki,
+        jvwiki,
+        lbewiki,
+        map_bmswiki,
+        mdfwiki,
+        mgwiki,
+        mhrwiki,
+        miwiki,
+        mrjwiki,
+        myvwiki,
+        nawiki,
+        ruwiki,
+        tetwiki,
+        towiki,
+        tywiki,
+        xalwiki
 
    from (select *
            from ( select count(*) as cawiki from cawiki.user_properties where up_property = 'cx' and up_value = 1 ) ca
@@ -560,6 +583,56 @@
                 ( select count(*) as tawiki from tawiki.user_properties where up_property = 'cx' and up_value = 1 ) ta on 1=1
                 left join
                 ( select count(*) as wawiki from wawiki.user_properties where up_property = 'cx' and up_value = 1 ) wa on 1=1
+                left join
+                ( select count(*) as acewiki from acewiki.user_properties where up_property = 'cx' and up_value = 1 ) ace on 1=1
+                left join
+                ( select count(*) as bjnwiki from bjnwiki.user_properties where up_property = 'cx' and up_value = 1 ) bjn on 1=1
+                left join
+                ( select count(*) as bugwiki from bugwiki.user_properties where up_property = 'cx' and up_value = 1 ) bug on 1=1
+                left join
+                ( select count(*) as bxrwiki from bxrwiki.user_properties where up_property = 'cx' and up_value = 1 ) bxr on 1=1
         ) sixth30
+
+            cross join
+
+        (select *
+           from ( select count(*) as chwiki from chwiki.user_properties where up_property = 'cx' and up_value = 1 ) ch
+                left join
+                ( select count(*) as fjwiki from fjwiki.user_properties where up_property = 'cx' and up_value = 1 ) fj on 1=1
+                left join
+                ( select count(*) as hawwiki from hawwiki.user_properties where up_property = 'cx' and up_value = 1 ) haw on 1=1
+                left join
+                ( select count(*) as hifwiki from hifwiki.user_properties where up_property = 'cx' and up_value = 1 ) hif on 1=1
+                left join
+                ( select count(*) as jvwiki from jvwiki.user_properties where up_property = 'cx' and up_value = 1 ) jv on 1=1
+                left join
+                ( select count(*) as lbewiki from lbewiki.user_properties where up_property = 'cx' and up_value = 1 ) lbe on 1=1
+                left join
+                ( select count(*) as map_bmswiki from map_bmswiki.user_properties where up_property = 'cx' and up_value = 1 ) map_bms on 1=1
+                left join
+                ( select count(*) as mdfwiki from mdfwiki.user_properties where up_property = 'cx' and up_value = 1 ) mdf on 1=1
+                left join
+                ( select count(*) as mgwiki from mgwiki.user_properties where up_property = 'cx' and up_value = 1 ) mg on 1=1
+                left join
+                ( select count(*) as mhrwiki from mhrwiki.user_properties where up_property = 'cx' and up_value = 1 ) mhr on 1=1
+                left join
+                ( select count(*) as miwiki from miwiki.user_properties where up_property = 'cx' and up_value = 1 ) mi on 1=1
+                left join
+                ( select count(*) as mrjwiki from mrjwiki.user_properties where up_property = 'cx' and up_value = 1 ) mrj on 1=1
+                left join
+                ( select count(*) as myvwiki from myvwiki.user_properties where up_property = 'cx' and up_value = 1 ) myv on 1=1
+                left join
+                ( select count(*) as nawiki from nawiki.user_properties where up_property = 'cx' and up_value = 1 ) na on 1=1
+                left join
+                ( select count(*) as ruwiki from ruwiki.user_properties where up_property = 'cx' and up_value = 1 ) ru on 1=1
+                left join
+                ( select count(*) as tetwiki from tetwiki.user_properties where up_property = 'cx' and up_value = 1 ) tet on 1=1
+                left join
+                ( select count(*) as towiki from towiki.user_properties where up_property = 'cx' and up_value = 1 ) to on 1=1
+                left join
+                ( select count(*) as tywiki from tywiki.user_properties where up_property = 'cx' and up_value = 1 ) ty on 1=1
+                left join
+                ( select count(*) as xalwiki from xalwiki.user_properties where up_property = 'cx' and up_value = 1 ) xal on 1=1
+        ) seventh30
 
 ;
