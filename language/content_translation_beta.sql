@@ -88,11 +88,11 @@
         warwiki,
         cebwiki,
         tlwiki,
-        cbk-zamwiki,
+        cbk_zamwiki,
         pamwiki,
         pagwiki,
         ilowiki,
-        be-x-oldwiki,
+        be_x_oldwiki,
         bewiki,
         bclwiki,
         kawiki,
@@ -120,15 +120,15 @@
         extwiki,
         papwiki,
         ltwiki,
-        bat-smgwiki,
+        bat_smgwiki,
         bswiki,
         etwiki,
         fiwiki,
-        fiu-vrowiki,
+        fiu_vrowiki,
         fywiki,
         hrwiki,
         huwiki,
-        nds-nlwiki,
+        nds_nlwiki,
         nlwiki,
         rowiki,
         sewiki,
@@ -359,7 +359,7 @@
                 left join
                 ( select count(*) as tlwiki from tlwiki.user_properties where up_property = 'cx' and up_value = 1 ) tl on 1=1
                 left join
-                ( select count(*) as cbk-zamwiki from cbk-zamwiki.user_properties where up_property = 'cx' and up_value = 1 ) cbk-zam on 1=1
+                ( select count(*) as cbk_zamwiki from cbk_zamwiki.user_properties where up_property = 'cx' and up_value = 1 ) cbk_zam on 1=1
                 left join
                 ( select count(*) as pamwiki from pamwiki.user_properties where up_property = 'cx' and up_value = 1 ) pam on 1=1
                 left join
@@ -367,7 +367,7 @@
                 left join
                 ( select count(*) as ilowiki from ilowiki.user_properties where up_property = 'cx' and up_value = 1 ) ilo on 1=1
                 left join
-                ( select count(*) as be-x-oldwiki from be-x-oldwiki.user_properties where up_property = 'cx' and up_value = 1 ) be-x-old on 1=1
+                ( select count(*) as be_x_oldwiki from be_x_oldwiki.user_properties where up_property = 'cx' and up_value = 1 ) be_x_old on 1=1
                 left join
                 ( select count(*) as bewiki from bewiki.user_properties where up_property = 'cx' and up_value = 1 ) be on 1=1
                 left join
@@ -427,7 +427,7 @@
                 left join
                 ( select count(*) as ltwiki from ltwiki.user_properties where up_property = 'cx' and up_value = 1 ) lt on 1=1
                 left join
-                ( select count(*) as bat-smgwiki from bat-smgwiki.user_properties where up_property = 'cx' and up_value = 1 ) bat-smg on 1=1
+                ( select count(*) as bat_smgwiki from bat_smgwiki.user_properties where up_property = 'cx' and up_value = 1 ) bat_smg on 1=1
                 left join
                 ( select count(*) as bswiki from bswiki.user_properties where up_property = 'cx' and up_value = 1 ) bs on 1=1
                 left join
@@ -435,7 +435,7 @@
                 left join
                 ( select count(*) as fiwiki from fiwiki.user_properties where up_property = 'cx' and up_value = 1 ) fi on 1=1
                 left join
-                ( select count(*) as fiu-vrowiki from fiu-vrowiki.user_properties where up_property = 'cx' and up_value = 1 ) fiu-vro on 1=1
+                ( select count(*) as fiu_vrowiki from fiu_vrowiki.user_properties where up_property = 'cx' and up_value = 1 ) fiu_vro on 1=1
                 left join
                 ( select count(*) as fywiki from fywiki.user_properties where up_property = 'cx' and up_value = 1 ) fy on 1=1
                 left join
@@ -447,7 +447,7 @@
             cross join
 
         (select *
-           from ( select count(*) as nds-nlwiki from nds-nlwiki.user_properties where up_property = 'cx' and up_value = 1 ) nds-nl
+           from ( select count(*) as nds_nlwiki from nds_nlwiki.user_properties where up_property = 'cx' and up_value = 1 ) nds_nl
                 left join
                 ( select count(*) as nlwiki from nlwiki.user_properties where up_property = 'cx' and up_value = 1 ) nl on 1=1
                 left join
