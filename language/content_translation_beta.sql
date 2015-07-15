@@ -394,7 +394,7 @@
                 left join
                 ( select count(*) as warwiki from warwiki.user_properties where up_property = 'cx' and up_value = 1 ) war on 1=1
                 left join
-                ( select count(*) as cebiki from cebwiki.user_properties where up_property = 'cx' and up_value = 1 ) ceb on 1=1
+                ( select count(*) as cebwiki from cebwiki.user_properties where up_property = 'cx' and up_value = 1 ) ceb on 1=1
                 left join
                 ( select count(*) as tlwiki from tlwiki.user_properties where up_property = 'cx' and up_value = 1 ) tl on 1=1
                 left join

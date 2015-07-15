@@ -541,8 +541,6 @@
                 ( select count(*) as gawiki from gawiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from gawiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) ga on 1=1
                 left join
                 ( select count(*) as gvwiki from gvwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from gvwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) gv on 1=1
-                left join
-                ( select count(*) as gvwiki from gvwiki.user_properties where up_property = 'cx' and up_value = 1 and up_user not in ( select up_user from gvwiki.user_properties where up_property = 'betafeatures-auto-enroll' and up_value = 1 ) ) gv on 1=1
          ) fifth30
 
             cross join
