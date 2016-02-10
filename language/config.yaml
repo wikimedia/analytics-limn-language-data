@@ -35,3 +35,10 @@ reportupdater-reports:
         starts: 2016-01-19
         explode_by:
             wiki_db: bswiki, cawiki, mediawikiwiki, testwiki, urwiki, wikidatawiki, zhwiki
+    crosswiki_beta:
+        frequency: days
+        granularity: days
+        timeboxed: true
+        starts: 2016-01-19
+        explode_by:
+            wiki_db: testwiki, test2wiki, mediawikiwiki
