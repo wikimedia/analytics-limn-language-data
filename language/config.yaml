@@ -27,3 +27,11 @@ reportupdater-reports:
         starts: 2015-01-13
         explode_by:
             wiki_db: cawiki, dawiki, eowiki, eswiki, idwiki, mswiki, nnwiki, nowiki, ptwiki, svwiki, minwiki, uzwiki, kywiki, pawiki, knwiki, ukwiki, bgwiki, frwiki, mkwiki, shwiki, slwiki, guwiki, viwiki, afwiki, anwiki, astwiki, bawiki, cvwiki, euwiki, glwiki, koiwiki, kvwiki, lezwiki, ocwiki, sahwiki, simplewiki, ttwiki, tyvwiki, udmwiki, xhwiki, cswiki, elwiki, kkwiki, zuwiki, akwiki, bmwiki, eewiki, ffwiki, kgwiki, kiwiki, lgwiki, nywiki, omwiki, rnwiki, sgwiki, sswiki, stwiki, tiwiki, tnwiki, tswiki, tumwiki, twwiki, vewiki, abwiki, avwiki, azwiki, crhwiki, gagwiki, hywiki, kaawiki, kbdwiki, krcwiki, ladwiki, mtwiki, mwlwiki, oswiki, rmywiki, roa_rupwiki, sqwiki, trwiki, warwiki, cebwiki, tlwiki, cbk_zamwiki, pamwiki, pagwiki, ilowiki, be_x_oldwiki, bewiki, bclwiki, kawiki, ruewiki, csbwiki, ltgwiki, lvwiki, liwiki, bhwiki, plwiki, hiwiki, swwiki, sowiki, snwiki, yowiki, amwiki, kabwiki, wowiki, igwiki, nsowiki, quwiki, nahwiki, aywiki, gnwiki, extwiki, papwiki, ltwiki, bat_smgwiki, bswiki, etwiki, fiwiki, fiu_vrowiki, fywiki, hrwiki, huwiki, nds_nlwiki, nlwiki, rowiki, sewiki, skwiki, srwiki, szlwiki, vepwiki, aswiki, bnwiki, bpywiki, mywiki, dzwiki, kmwiki, lowiki, mlwiki, mrwiki, newiki, newwiki, orwiki, piwiki, sawiki, siwiki, tewiki, thwiki, kwwiki, gawiki, rwwiki, gvwiki, nvwiki, pdcwiki, scowiki, gdwiki, srnwiki, tpiwiki, urwiki, cywiki, vlswiki, yiwiki, zeawiki, biwiki, brwiki, chrwiki, chywiki, frpwiki, htwiki, lnwiki, maiwiki, nrmwiki, pcdwiki, pihwiki, pmswiki, smwiki, tawiki, wawiki, acewiki, bjnwiki, bugwiki, bxrwiki, chwiki, fjwiki, hawwiki, hifwiki, jvwiki, lbewiki, map_bmswiki, mdfwiki, mgwiki, mhrwiki, miwiki, mrjwiki, myvwiki, nawiki, ruwiki, tetwiki, towiki, tywiki, xalwiki, alswiki, angwiki, barwiki, dewiki, dsbwiki, fowiki, frrwiki, hsbwiki, ikwiki, iswiki, klwiki, kshwiki, lbwiki, ndswiki, pflwiki, stqwiki
+
+    flow_beta:
+        frequency: days
+        granularity: days
+        timeboxed: true
+        starts: 2016-01-19
+        explode_by:
+            wiki_db: bswiki, cawiki, mediawikiwiki, testwiki, urwiki, wikidatawiki, zhwiki
