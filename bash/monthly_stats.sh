@@ -34,8 +34,10 @@ till_this_month_new_translators=`run_vvv_query "select translation_started_by, c
 echo "Number of new translators (during the month): $[$till_this_month_new_translators-$till_previous_month_new_translators]"
 
 # Exclude hak
-top_user=`run_query "select count(translation_target_title) from cx_translations where (translation_status = 'published' or translation_target_url is not null) and translation_started_by <> 35758721 and translation_last_updated_timestamp < '${full_month}99999999' group by translation_started_by order by count(translation_target_title) desc limit 1;" | grep "[0-9]"`
-echo "Highest number of articles created by one user (cumulative number till end of the month): $top_user"
+top_user_count=`run_query "select count(translation_target_title) from cx_translations where (translation_status = 'published' or translation_target_url is not null) and translation_started_by <> 35758721 and translation_last_updated_timestamp < '${full_month}99999999' group by translation_started_by order by count(translation_target_title) desc limit 1;" | grep "[0-9]"`
+top_user_id=`run_query "select translation_started_by from cx_translations where (translation_status = 'published' or translation_target_url is not null) and translation_started_by <> 35758721 and translation_last_updated_timestamp < '${full_month}99999999' group by translation_started_by order by count(translation_target_title) desc limit 1;" | grep "[0-9]"`
+top_user_name=`sql centralauth -e "SELECT gu_name FROM globaluser WHERE gu_id = $top_user_id;" | tail -n 1`
+echo "Highest number of articles created by one user (cumulative number till end of the month): $top_user_count ($top_user_name)"
 
 top_translators_per_language=`run_query "select translation_target_language, count(distinct(translation_started_by)) as translator_count from cx_translations where ( translation_status = 'published' or translation_target_url is not null ) and translation_last_updated_timestamp < '${full_month}99999999' group by translation_target_language order by translator_count desc limit 1;" | grep "[0-9]"`
 echo "Highest number of translators for a Wikipedia (cumulative number till end of the month): $top_translators_per_language"
