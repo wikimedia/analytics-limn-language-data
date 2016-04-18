@@ -26,7 +26,7 @@ reports:
         granularity: days
         starts: 2016-01-19
         explode_by:
-            wiki_db: bswiki, cawiki, mediawikiwiki, testwiki, urwiki, wikidatawiki, zhwiki
+            wiki_db: bswiki, cawiki, frwikisource, mediawikiwiki, testwiki, urwiki, wikidatawiki, zhwiki
 
     crosswiki_beta:
         granularity: days
