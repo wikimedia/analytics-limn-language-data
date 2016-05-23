@@ -32,6 +32,7 @@ known_error_codes = [
 	'blocked',
 	'docserver',
 	'globalblocking-ipblocked-range',
+	'hookaborted',
 	'internal_api_error_DBConnectionError',
 	'internal_api_error_DBQueryError',
 	'internal_api_error_FileBackendError',
