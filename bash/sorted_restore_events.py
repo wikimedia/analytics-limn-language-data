@@ -19,28 +19,50 @@ log_db = MySQLdb.connect(
 
 cursor = log_db.cursor()
 
-cursor.execute("SELECT userAgent, wiki, event_sourceLanguage, event_sourceTitle, event_targetLanguage, event_targetTitle, event_token, event_trace, event_version FROM ContentTranslationError_11767097 WHERE event_context = 'restore-failure' and timestamp like '" +
-               timestamp + "%' GROUP BY event_session ORDER BY timestamp")
+cursor.execute("""
+    SELECT
+        userAgent,
+        wiki,
+        event_sourceLanguage,
+        event_sourceTitle,
+        event_targetLanguage,
+        event_targetTitle,
+        event_token,
+        event_trace,
+        event_version
+    FROM
+        ContentTranslationError_11767097
+    WHERE
+        event_context = 'restore-failure' and
+        timestamp like '""" + timestamp + """%'
+    GROUP BY
+        event_session
+    ORDER BY
+        timestamp
+""")
 
 log_db.close()
 
 event_trace_col = 7
 error_counts = {}
 known_error_codes = [
+    'couldnt-restore',
     'draft-does-not-exist',
     'you-must-log-in',
     'text-status-error',
     'text-status-timeout',
+    'wikimedia-error',
 ]
 cryptic_counts = {}
 known_traces = {
-    '{"xhr":{"readyState":0,"responseText":"","status":0,"statusText":"error"},"textStatus":"error","exception":"","errorCode":"http"}': 'text-status-error',
-    '{"xhr":{"readyState":0,"status":0,"statusText":"timeout"},"textStatus":"timeout","exception":"timeout","errorCode":"http"}': 'text-status-timeout',
+    '{"xhr":{"readyState":0,"responseText":"","status":0,"statusText":"error"},"textStatus":"error","exception":"","errorCode":"http"}': 'text-status-error',  # noqa: E501
+    '{"xhr":{"readyState":0,"status":0,"statusText":"timeout"},"textStatus":"timeout","exception":"timeout","errorCode":"http"}': 'text-status-timeout',  # noqa: E501
 }
 
 for error_code in known_error_codes:
     error_counts[error_code] = []
 
+# print all the first cell of all the rows
 rows = cursor.fetchall()
 for row in rows:
     error_code = None
@@ -49,9 +71,13 @@ for row in rows:
 
     if trace in known_traces:
         error_code = known_traces[trace]
-    elif re.search('"info":"Draft does not exist"', trace):
+    elif re.search('Couldn\'t restore against the old source revision', trace):
+        error_code = 'couldnt-restore'
+    elif re.search('Draft does not exist', trace):
         error_code = 'draft-does-not-exist'
-    elif re.search('"info":"To view your translations, you must log in"', trace):
+    elif re.search('Wikimedia Error', trace):
+        error_code = 'wikimedia-error'
+    elif re.search('To view your translations, you must log in', trace):
         error_code = 'you-must-log-in'
 
     if error_code:
@@ -59,19 +85,25 @@ for row in rows:
             error_counts[error_code] = []
             print "New kind of error! ----------> " + error_code
 
-            error_counts[error_code].append(row)
+        error_counts[error_code].append(row)
     else:
         if trace not in cryptic_counts:
             cryptic_counts[trace] = []
 
-            cryptic_counts[trace].append(row)
+        cryptic_counts[trace].append(row)
 
 found_counts = [str(len(rows))]
 for error in known_error_codes:
-    found_counts.append(str(len(error_counts[error])))
+    error_count = len(error_counts[error])
+    if error_count:
+        error_string = str(error_count)
+    else:
+        error_string = ''
+    found_counts.append(error_string)
 
 print("\t".join(found_counts))
 
-print "cryptic traces:"
 for trace in sorted(cryptic_counts):
-    print str(len(cryptic_counts[trace])) + "\t" + trace
+    print 'cryptic trace: ' + str(len(cryptic_counts[trace])) + "\t" + trace
+
+exit()
