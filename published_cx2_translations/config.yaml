@@ -1,0 +1,17 @@
+reports:
+    published_cx2_translations:
+        type: script
+        granularity: weeks
+        funnel: true
+        starts: 2018-01-01
+        lag: 86400 # wait 1 day to compute last week
+
+databases:
+    cx_translations:
+        host: analytics-store.eqiad.wmnet
+        port: 3306
+        creds_file: /etc/mysql/conf.d/research-client.cnf
+        db: wikishared
+
+defaults:
+    db: cx_translations
