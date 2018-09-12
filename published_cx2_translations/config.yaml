@@ -4,6 +4,11 @@ reports:
         starts: 2018-01-01
         lag: 86400 # wait 1 day to compute last week
 
+    published_cx2_translators:
+        granularity: weeks
+        starts: 2018-01-01
+        lag: 86400 # wait 1 day to compute last week
+
 databases:
     wikishared:
         host: analytics-store.eqiad.wmnet
