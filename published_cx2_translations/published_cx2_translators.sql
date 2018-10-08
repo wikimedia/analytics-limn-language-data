@@ -1,5 +1,5 @@
 select
-    DATE('{from_timestamp}') AS date,
+    DATE('{to_timestamp}') AS date,
     count(distinct(translation_last_update_by)) AS cx2_published_translators
 from
     cx_translations
