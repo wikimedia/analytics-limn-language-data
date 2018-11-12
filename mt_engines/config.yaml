@@ -1,0 +1,17 @@
+reports:
+
+    mt_engines:
+        granularity: weeks
+        funnel: true
+        starts: 2016-01-18
+        lag: 86400 # wait 1 day to compute last week
+
+databases:
+    wikishared:
+        host: analytics-store.eqiad.wmnet
+        port: 3306
+        creds_file: /etc/mysql/conf.d/stats-research-client.cnf
+        db: wikishared
+
+defaults:
+    db: wikishared
