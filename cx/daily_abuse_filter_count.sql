@@ -9,7 +9,7 @@ select
 -- Create a table for storing the counts
 create table if not exists staging.cx_abuse_filter_daily (
   id bigint(20) not null auto_increment,
-  date varchar(10),
+  date date,
   project varbinary(1024),
   abuse_filter_id bigint(20),
   count bigint(20),
