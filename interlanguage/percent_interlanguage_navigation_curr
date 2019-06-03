@@ -1,7 +1,7 @@
 #!/bin/bash
 hive -e "
- select '$1' AS date,
-        weekly_navigation_count.project,
+ select '$1' as date,
+        weekly_navigation_count.project as project,
         navigation_count_total / view_count_total as percent_interlanguage_navigation
 
    from (select concat(current_project, '.', project_family) as project,
@@ -28,4 +28,3 @@ hive -e "
         ) weekly_projectview                    on weekly_navigation_count.project = weekly_projectview.project
 ;
 " 2> /dev/null | grep -v parquet.hadoop
-
